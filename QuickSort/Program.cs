@@ -8,13 +8,19 @@ namespace QuickSort
 {
     class Program
     {
+        static Random rand = new Random();
         static void Main(string[] args)
         {
-            int[] arr = new[] { 2, 5, 87, 34, 65, 2, 16, 53 };
+            int[] arr = new int[100];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rand.Next(0, 1000);
+            }
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write(arr[i] + " ");
             }
+            Console.WriteLine();
             Console.WriteLine();
             Sort(arr, 0, arr.Length - 1);
             for (int i = 0; i < arr.Length; i++)
